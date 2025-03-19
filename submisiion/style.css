@@ -1,0 +1,188 @@
+body{
+    margin: 0%;
+    font-family: sans-serif;
+    /* display: flex; */
+}
+header {
+    background-color: rgb(31, 83, 71);
+    padding: 20px;
+    margin-bottom: 20px;
+    color: rgb(0, 255, 195);
+}
+h1 {
+    text-align: center;
+}
+
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: auto;
+  /* padding: 16px; */
+}
+
+.tambah-buku {
+    border: 2px, #45a8cc, solid;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#bookForm{
+    width: 90%;
+    margin: auto;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#bookForm > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+}
+
+
+  label {
+    width: 20%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input {
+    width: 80%;
+    margin-left: 5px;
+    justify-content: start;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+ 
+  input[type="checkbox"] {
+    width: auto; /* Agar checkbox tetap kecil */
+    margin-left: 0px;
+}
+
+  #bookFormSubmit {
+    background-color: #45a8cc;
+    padding: 12px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#bookFormSubmit:hover {
+    background-color: #1f5d74;
+    cursor: pointer;
+}
+
+
+/* section pencarian */
+.cari-buku{
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 2px, #45a8cc, solid;
+  border-radius: 10px;
+}
+
+.cari-buku > form {
+  padding: 15px;
+  width: 100%;
+}
+
+
+.cari-buku > form > button {
+  background-color: #45a8cc;
+  color: white;
+  padding: 12px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.cari-buku > form > button:hover{
+  background-color: #1f5d74;
+}
+
+
+/* section buku */
+.buku {
+  border: 2px, #45a8cc, solid;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.buku > .buku-list {
+  padding: 0px;
+}
+
+.buku-item {
+  padding: 4px;
+  border: 2px #45a8cc, solid;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.buku-item > p {
+  color: #333;
+}
+
+.aksi{
+  margin-bottom: 10px;
+}
+
+.aksi > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.aksi > .selesai {
+  background-color: rgb(31, 138, 31);
+  color: white;
+  padding: 10px;
+}
+.aksi > .selesai:hover {background-color: rgb(17, 99, 17);}
+
+.aksi > .hapus {
+  background-color: rgb(157, 17, 17);
+  color: white;
+  padding: 10px;
+}
+.aksi > .hapus:hover { background-color: rgb(122, 9, 9); }
+
+.aksi > .edit {
+  background-color: rgb(206, 179, 29);
+  color: white;
+  padding: 10px;
+}
+.aksi > .edit:hover { background-color: rgb(181, 148, 27);}
