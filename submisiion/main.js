@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', function(){
         e.preventDefault();
         addBook();
     });
+
+    document.getElementById('searchBook').addEventListener('submit', function (event) {
+        event.preventDefault(); 
+        searchBook();
+    });
+    
+    document.getElementById('searchBookTitle').addEventListener('input', function () {
+        searchBook();
+    });
 });
 
 // fungsi utama
@@ -203,29 +212,26 @@ function removeFromBookshelf (bookId) {
 
 // fungsi V
 // membuat fitur cari buku
-// function searchBook() {
-//     const searchText = document.getElementById('searchBookTitle').value.toLowerCase(); 
-//     const notFinishedReading = document.getElementById('incompleteBookList');
-//     const finishedReading = document.getElementById('completeBookList');
+function searchBook() {
+    const searchText = document.getElementById('searchBookTitle').value.toLowerCase(); 
+    const notFinishedReading = document.getElementById('incompleteBookList');
+    const finishedReading = document.getElementById('completeBookList');
 
-//     notFinishedReading.innerHTML = ''; 
-//     finishedReading.innerHTML = ''; 
+    notFinishedReading.innerHTML = ''; 
+    finishedReading.innerHTML = ''; 
 
-//     for (const book of array_book) {
-//         if (book.title.toLowerCase().includes(searchText)) {
-//             const newElementHTML = makeBookshelf(book);
-//             if (!book.isCompleted) {
-//                 notFinishedReading.append(newElementHTML);
-//             } else {
-//                 finishedReading.append(newElementHTML);
-//             }
-//         }
-//     }
-// }
+    for (const book of array_book) {
+        if (book.title.toLowerCase().includes(searchText)) {
+            const newElementHTML = makeBookshelf(book);
+            if (!book.isCompleted) {
+                notFinishedReading.append(newElementHTML);
+            } else {
+                finishedReading.append(newElementHTML);
+            }
+        }
+    }
+}
 
-// document.getElementById('searchButton').addEventListener('click', function () {
-//     searchBook();
-// });
 
 
 
